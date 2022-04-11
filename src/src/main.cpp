@@ -8,14 +8,14 @@ system("CommandName");
 
 using namespace std;
 
-static void show_usage(std::string name)
+static void show_usage()
 {
-    std::cerr << "Usage: "
+    cerr << "Usage: "
               << " <option(s)> SOURCES"
               << "Options:\n"
               << "\t-h,--help\t\tShow this help message\n"
               << "\t-d,--destination DESTINATION\tSpecify the destination path"
-              << std::endl;
+              << endl;
 }
 
 int main(int argc, char *argv[])
@@ -27,7 +27,11 @@ int main(int argc, char *argv[])
         string LinkToDownload = argv[2];
 
         // string LinkToDownload = argv[2];
-        cout << "Downloading " << LinkToDownload << std::endl;
+        cout << "Downloading " << LinkToDownload << endl;
         system(("git clone " + LinkToDownload).c_str());
+    }
+    if (argv[1] != "help" || argv[1] != "Help")
+    {
+        show_usage();
     }
 }
