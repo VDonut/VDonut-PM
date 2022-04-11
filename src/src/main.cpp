@@ -1,5 +1,6 @@
 /*
-
+To Call a CMD Command Do:
+system("CommandName");
 
 */
 
