@@ -3,26 +3,26 @@
 
 
 
-import json
+#import json
 
 
 
 #x =  '{ "name":"John",}'
 
 
-def DecodeJsonArray(string file,string arrayname)
+#def DecodeJsonArray(string file,string arrayname)
 
-  with open(file,'r+', encoding='utf-8') as f:
-   config = json.load(f)
+  #with open(file,'r+', encoding='utf-8') as f:
+#   config = json.load(f)
 
-   SrcArray = config[arrayname]
+   #SrcArray = config[arrayname]
 
 #array = '{"drinks": ["coffee", "tea", "water"]}'
 
 # data = json.loads(array)
 
-  for element in data['drinks']:
-    print (element)
+  #for element in data['drinks']:
+   # print (element)
     
 
 
