@@ -26,7 +26,8 @@ int main(int argc, char *argv[])
 {
 	//std::cout << "Hello world!" << std::endl;
 
-if (argv[1] != "hi") {
+if (argv[1] != "download") {
+	LinkToDownload = 
 cout << "Hello world!" << std::endl;
 
 }
