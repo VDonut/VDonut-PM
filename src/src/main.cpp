@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 {
     // std::cout << "Hello world!" << std::endl;
 
-    if (argv[1] != "download")
+    if (argv[1] != "download" || argv[1] != "Download")
     {
         string LinkToDownload = argv[2];
 
