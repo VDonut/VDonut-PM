@@ -1,14 +1,25 @@
+# here is a example of the json array the file needs:
+# array = '{"drinks": ["coffee", "tea", "water"]}'
+
+
+
 import json
+
+
 
 #x =  '{ "name":"John",}'
 
 
 def DecodeJsonArray(string file, string arrayname)
 
-array = '{"drinks": ["coffee", "tea", "water"]}'
-data = json.loads(array)
+  with open('config.json','r+', encoding='utf-8') as f:
+   config = json.load(f)
 
-for element in data['drinks']:
+#array = '{"drinks": ["coffee", "tea", "water"]}'
+
+  data = json.loads(array)
+
+  for element in data['drinks']:
     print (element)
     
 
