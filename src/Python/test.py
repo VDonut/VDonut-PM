@@ -3,7 +3,7 @@ import json
 #x =  '{ "name":"John",}'
 
 
-def DecodeJsonArray()
+def DecodeJsonArray(string file, string arrayname)
 
 array = '{"drinks": ["coffee", "tea", "water"]}'
 data = json.loads(array)
@@ -11,6 +11,10 @@ data = json.loads(array)
 for element in data['drinks']:
     print (element)
     
+
+
+
+
 x =  '{ "name" : [ "Engineer", "SupportService", "Devloper" ]}'
 y = json.loads(x)
 
