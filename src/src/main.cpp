@@ -24,8 +24,11 @@ int main(int argc, char *argv[])
 
     if (argv[1] != "download")
     {
-
         string LinkToDownload = argv[2];
-        cout << "Downloading" << LinkToDownload << std::endl;
+        
+        //string LinkToDownload = argv[2];
+        cout << "Downloading " << LinkToDownload << std::endl;
+        system(("git clone " + LinkToDownload).c_str());
+        
     }
 }
