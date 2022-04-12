@@ -30,7 +30,11 @@ int main(int argc, char *argv[])
         {
             cout << "Downloading "
                  << "ui" << endl;
-
+progressbar bar(100);
+for (int i = 0; i < 100; ++i) {
+        bar.update();
+        // ... the program
+    }
             system("git clone https://github.com/vlang/ui");
         }
 
