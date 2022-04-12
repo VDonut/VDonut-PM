@@ -58,6 +58,16 @@ def main():
         print(Fore.GREEN + "make is found")
         print(Style.RESET_ALL)
 
+    # Check if the user has G++
+    Gcheck = command_exists("G++ -v")
+    progressbar("G++", .001)
+    if Gcheck != False:
+        print(Fore.RED + "No G++")
+        print(Style.RESET_ALL)
+    elif Gcheck != True:
+        print(Fore.GREEN + "G++ is found")
+        print(Style.RESET_ALL)
+
     return
 
 main()
