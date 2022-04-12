@@ -5,6 +5,7 @@ system("CommandName");
 */
 
 #include <iostream>
+#include "progressbar.hpp"
 
 using namespace std;
 
@@ -29,6 +30,8 @@ int main(int argc, char *argv[])
         {
             cout << "Downloading "
                  << "ui" << endl;
+
+            system("git clone https://github.com/vlang/ui");
         }
 
         string LinkToDownload = argv[2];
