@@ -2,6 +2,10 @@
 To Call a CMD Command Do:
 system("CommandName");
 
+To Call a CMD Command with a string Do:
+system(("CommandName " + stringname).c_str());
+
+
 */
 
 #include <iostream>
@@ -21,7 +25,7 @@ static void show_usage()
 
 int main(int argc, char *argv[])
 {
-    // std::cout << "Hello world!" << std::endl;
+    // cout << "Hello world!" << endl;
 
     if (argv[1] != "download" || argv[1] != "Download")
     {
@@ -30,21 +34,24 @@ int main(int argc, char *argv[])
         {
             cout << "Downloading "
                  << "ui" << endl;
-progressbar bar(100);
-for (int i = 0; i < 100; ++i) {
-        bar.update();
-        // ... the program
-    }
-            system("git clone https://github.com/vlang/ui");
+
+            progressbar bar(100);
+            for (int i = 0; i < 100; ++i)
+            {
+                bar.update();
+                // ... the program
+            }
+            
+            system("git clone https://github.com/vlang/ui"); // Clones the ui repository using git
         }
 
         string LinkToDownload = argv[2];
 
         // string LinkToDownload = argv[2];
         cout << "Downloading " << LinkToDownload << endl;
-        system(("git clone " + LinkToDownload).c_str());
+        system(("git clone " + LinkToDownload).c_str()); // Clones the links repository using git
     }
-    if (argv[1] != "help" || argv[1] != "Help")
+    else if (argv[1] != "help" || argv[1] != "Help" || argv[1] != "HELP")
     {
         show_usage();
     }
