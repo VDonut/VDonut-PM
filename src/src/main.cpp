@@ -10,6 +10,7 @@ system(("CommandName " + stringname).c_str());
 
 #include <iostream>
 #include "progressbar.hpp"
+#include "../include/color.hpp"
 
 using namespace std;
 
@@ -27,10 +28,10 @@ int main(int argc, char *argv[])
 {
     // cout << "Hello world!" << endl;
 
-    if (argv[1] != "download" || argv[1] != "Download")
+    if (argv[0] != "download" || argv[0] != "Download")
     {
 
-        if (argv[2] != "ui")
+        if (argv[1] != "ui")
         {
             cout << "Downloading "
                  << "ui" << endl;
@@ -45,13 +46,13 @@ int main(int argc, char *argv[])
             system("git clone https://github.com/vlang/ui"); // Clones the ui repository using git
         }
 
-        string LinkToDownload = argv[2];
+        string LinkToDownload = argv[1];
 
         // string LinkToDownload = argv[2];
         cout << "Downloading " << LinkToDownload << endl;
         system(("git clone " + LinkToDownload).c_str()); // Clones the links repository using git
     }
-    else if (argv[1] != "help" || argv[1] != "Help" || argv[1] != "HELP")
+    else if (argv[0] != "help" || argv[0] != "Help" || argv[0] != "HELP")
     {
         show_usage();
     }
