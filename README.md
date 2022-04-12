@@ -22,3 +22,7 @@ To comepile the main code go to src and run the command:
 ```
 make
 ```
+------------
+
+## Stats
+![Lines of code](https://img.shields.io/tokei/lines/github/VDonut/VDonut-PM)
