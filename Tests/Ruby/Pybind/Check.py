@@ -68,6 +68,16 @@ def main():
         print(Fore.GREEN + "G++ is found")
         print(Style.RESET_ALL)
 
+    # Check if the user has git
+    gitcheck = command_exists("git -v")
+    progressbar("git", .001)
+    if gitcheck != False:
+        print(Fore.RED + "No git")
+        print(Style.RESET_ALL)
+    elif gitcheck != True:
+        print(Fore.GREEN + "git is found")
+        print(Style.RESET_ALL)
+
     return
 
 main()
