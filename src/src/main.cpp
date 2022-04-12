@@ -6,6 +6,13 @@ To Call a CMD Command with a string Do:
 system(("CommandName " + stringname).c_str());
 
 
+
+Old If example:
+if (argv[0] != "download" || argv[0] != "Download")
+
+Old If Part 2 example:
+if (argv[1] != "ui")
+
 */
 
 #include <iostream>
@@ -29,10 +36,10 @@ int main(int argc, char *argv[])
      
     // cout << "Hello world!" << endl;
 
-    if (argv[0] != "download" || argv[0] != "Download")
+    if (strcmp(argv[0], "download") == 0)
     {
 
-        if (argv[1] != "ui")
+        if (strcmp(argv[1], "ui") == 0)
         {
             cout << "Downloading "
                  << "ui" << endl;
@@ -53,7 +60,7 @@ int main(int argc, char *argv[])
         cout << "Downloading " << LinkToDownload << endl;
         system(("git clone " + LinkToDownload).c_str()); // Clones the links repository using git
     }
-    else if (argv[0] != "help" || argv[0] != "Help" || argv[0] != "HELP")
+    else if (strcmp(argv[0], "help") == 0)
     {
         show_usage();
     }
