@@ -48,6 +48,16 @@ def main():
         print(Fore.GREEN + "Ruby is found")
         print(Style.RESET_ALL)
 
+    # Check if the user has make
+    makecheck = command_exists("make -v")
+    progressbar("make", .001)
+    if makecheck != False:
+        print(Fore.RED + "No make")
+        print(Style.RESET_ALL)
+    elif makecheck != True:
+        print(Fore.GREEN + "make is found")
+        print(Style.RESET_ALL)
+
     return
 
 main()
