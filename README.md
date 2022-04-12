@@ -1,3 +1,4 @@
+
 # VDonut PM
  
 ## Platforms:
@@ -5,5 +6,19 @@
 
 
 
+------------
+
+
 
 ## Reqierments
+- make
+- G++
+
+------------
+
+
+## Compile
+To comepile the main code go to src and run the command:
+```
+make
+```
